@@ -5,11 +5,13 @@ import { ElementPlusContainer } from '@vitepress-preview/component'
 
 import '@vitepress-preview/component/style.css'
 import 'z-zimo-ui/dist/index.css'
+import "./styles/index.scss";
 
 export default {
   ...DefaultTheme,
-  enhanceApp({ app }: { app: App }) {
-    app.component('demo-preview', ElementPlusContainer)
-    app.use(ZZimoUI)
+  enhanceApp(ctx: { app: App }) {
+    DefaultTheme.enhanceApp(ctx);
+    ctx.app.component('demo-preview', ElementPlusContainer)
+    ctx.app.use(ZZimoUI)
   },
 }

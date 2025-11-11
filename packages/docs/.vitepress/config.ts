@@ -8,7 +8,7 @@ import {
 export default defineConfig({
   title: 'Z-Zimo-UI',
   description: '基于Vue3 高仿 element-ui 组件库',
-  appearance: false, // 关闭 darkMode @todo 深色模式完成后打开
+  appearance: true, // 关闭 darkMode @todo 深色模式完成后打开
   base: '/z-zimo-ui/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -28,7 +28,7 @@ export default defineConfig({
       {
         text: '基础组件',
         collapsed: false,
-        items: [{ text: 'Button 按钮', link: 'components/button' }],
+        items: [{ text: 'Button 按钮', link: '/components/button' }],
       },
     ],
 
